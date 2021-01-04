@@ -17,14 +17,24 @@ spec:
           image: "itzg/minecraft-server"
           imagePullPolicy: Always
           env:
+            - name: TZ
+              value: "America/Los_Angeles"
             - name: EULA
               value: "TRUE"
             - name: TYPE
-              value: "SPIGOT"
+              value: "PAPER"
             - name: VERSION
-              value: "1.14.4"
+              value: "LATEST"
             - name: MEMORY
-              value: "1G"
+              value: "2G"
+            - name: ENABLE_AUTOPAUSE
+              value: "TRUE"
+            - name: MOTD
+              value: "A brave new world!"
+            - name: ICON
+              value: "https://i.imgur.com/JJbrwUF.jpg"
+            - name: USE_AIKAR_FLAGS
+              value: "true"
           ports:
             - containerPort: 25565
           tty: true
@@ -48,6 +58,6 @@ spec:
   selector:
     app: mc-srv
   ports:
-   - protocol: TCP
-     port: 25565
-     nodePort: 30072
+    - protocol: TCP
+      port: 25565
+      nodePort: 30072

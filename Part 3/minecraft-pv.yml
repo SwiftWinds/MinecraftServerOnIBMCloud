@@ -9,7 +9,7 @@ metadata:
     appid: portal
 spec:
   capacity:
-    storage: 1Gi
+    storage: 5Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
