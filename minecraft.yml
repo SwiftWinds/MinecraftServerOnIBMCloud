@@ -30,11 +30,13 @@ spec:
             - name: ENABLE_AUTOPAUSE
               value: "TRUE"
             - name: MOTD
-              value: "A brave new world!"
+              value: "You aren't supposed to see this. I'm behind Bungeecord!"
             - name: ICON
               value: "https://i.imgur.com/JJbrwUF.jpg"
             - name: USE_AIKAR_FLAGS
               value: "true"
+            - name: ONLINE_MODE
+              value: "FALSE"
           ports:
             - containerPort: 25565
           tty: true
